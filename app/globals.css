@@ -597,6 +597,41 @@
   }
 }
 
+/* ── section-tabs: всегда wrap, без обрезания ── */
+.checklist-root .section-tabs {
+  flex-wrap: wrap;
+  overflow-x: visible;
+  justify-content: center;
+}
+
+/* ── grid-2col mobile collapse ── */
+@media (max-width: 600px) {
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+  }
+  .checklist-root .section-tabs {
+    gap: 5px;
+  }
+  .checklist-root .section-tabs .toc-link {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  .checklist-root .guide-card {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  .checklist-root .pill-toggle {
+    font-size: 17px;
+  }
+  .checklist-root .mood-scale-grid {
+    gap: 4px;
+  }
+  .checklist-root .day-card,
+  .checklist-root .step-card {
+    padding: 14px 14px;
+  }
+}
+
 /* ── Print ── */
 
 @media print {

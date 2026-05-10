@@ -561,11 +561,11 @@ export default function DnevnikPanikiPage() {
             </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 4 }}>
+          <div className="grid-2col" style={{ marginBottom: 4 }}>
             <Field label="Наличные:" value={state.cash} onChange={(v) => update("cash", v)} rows={1} />
             <Field label="На карте / счёте:" value={state.account} onChange={(v) => update("account", v)} rows={1} />
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+          <div className="grid-2col">
             <Field label="Доход в этом месяце:" value={state.income} onChange={(v) => update("income", v)} rows={1} />
             <Field label="Обязательные расходы:" value={state.expenses} onChange={(v) => update("expenses", v)} rows={1} />
           </div>
@@ -765,7 +765,7 @@ function NavBar({
           </div>
         </div>
         <ProgressBar value={progress} />
-        <div className="section-tabs" data-open={open} style={{ justifyContent: "flex-start" }}>
+        <div className="section-tabs" data-open={open} style={{ justifyContent: "center", flexWrap: "wrap", overflowX: "visible", gap: "6px 8px" }}>
           <a href="#s1" className="toc-link" onClick={() => setOpen(false)}>1. Ситуация</a>
           <a href="#s2" className="toc-link" onClick={() => setOpen(false)}>2. Дыхание</a>
           <a href="#s3" className="toc-link" onClick={() => setOpen(false)}>3. Страх</a>
